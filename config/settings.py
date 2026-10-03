@@ -15,6 +15,7 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
 # Railway domeni uchun CSRF xatoligini oldini olish
 CSRF_TRUSTED_ORIGINS = [
+    "https://maktabvazifaback-production.up.railway.app",
     "https://maktabvazifabackup.railway.app",
 ]
 
