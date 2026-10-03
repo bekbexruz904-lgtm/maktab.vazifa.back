@@ -13,6 +13,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-change-me-in-producti
 DEBUG = env_bool("DEBUG", True)
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
+# Railway domeni uchun CSRF xatoligini oldini olish
+CSRF_TRUSTED_ORIGINS = [
+    "https://maktabvazifabackup.railway.app",
+]
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
